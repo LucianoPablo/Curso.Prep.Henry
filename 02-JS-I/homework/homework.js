@@ -124,7 +124,7 @@ function elevarAlCubo(num) {
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  return math.pow(num, exponent);
+  return Math.pow(num, exponent);
   
 }
 function redondearNumero(num) {
@@ -141,28 +141,28 @@ function redondearNumero(num) {
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  return math.ceil(num);
+  return Math.ceil(num);
 }
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  return math.random();
+  return Math.random();
 }
 function esPositivo(numero) {
   //La función va a recibir un entero. Devuelve como resultado una cadena de texto que indica si el número es positivo o negativo. 
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero = 0) 
+  if (numero == 0) 
   { return false; }
   else if (numero > 0 ) { return "Es positivo"; }
-  else {return "es negativo";}
+  else {return "Es negativo";}
 }
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-  var nueva = "str!"
+  var nueva = (str + "!");
   return nueva; 
 }
 function combinarNombres(nombre, apellido) {
@@ -176,8 +176,7 @@ function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  var nueva  =  console.log ("Hola" + nombre + "!");
-  return nueva; 
+  return ("Hola " + nombre + "!" )
 }
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
@@ -201,7 +200,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  var valordolar = (euro * 1,20); 
+  var valordolar = (euro * 1.20); 
   return valordolar; 
 }
 function esVocal(letra){
@@ -209,12 +208,10 @@ function esVocal(letra){
   //Verificar si el usuario ingresó un string de más de un carácter y, en ese caso, informarle 
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra.length == 2) 
+  if (letra.length > 1 ) 
   { return "Dato incorrecto"; }
-  else if (letra == "a", "e","i","o","u" ) { return "Es vocal"; }
-  else {return "no es vocal";}
-
-}
+  else if (letra == "a", "e","i","o","u","A","E","I","O","U" ) { return "Es vocal"; }
+  }
 // No modificar nada debajo de esta línea
 // --------------------------------
 
